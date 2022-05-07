@@ -4,7 +4,7 @@
 <head>
   <title>GeoJSON</title>
   <meta charset="utf-8">
-  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/d3.v5.js"></script>
   <style>
     #content .map path {
       fill: #ddd;
@@ -73,8 +73,11 @@
         .append('path')
         .attr('d', geoGenerator);
     }
-
-    update(geojson);
+    
+    d3.json("http://localhost:8000/GeoWaltham/data_2.json").then(function(data) {
+      update(data);
+    });
+    
   </script>
   
 </body>
