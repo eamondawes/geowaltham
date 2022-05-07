@@ -6,16 +6,20 @@
   <meta charset="utf-8">
   <script src="https://d3js.org/d3.v5.js"></script>
   <style>
+    svg {
+      outline: 1px solid black;
+    }
     #content .map path {
-      fill: #ddd;
       stroke: #aaa;
+      fill: transparent;
+      stroke-width: .2px;
     }
   </style>
 </head>
 
 <body>
   <div id="content">
-    <svg width="800px" height="400px">
+    <svg width="1200px" height="600px">
       <g class="map"></g>
     </svg>
   </div>
@@ -57,9 +61,7 @@
       ]
     };
 
-    let projection = d3.geoEquirectangular()
-      .scale(200)
-      .translate([200, 150]);
+    let projection = d3.geoEquirectangular().center([-72, 42]).scale(60000);
 
     let geoGenerator = d3.geoPath()
       .projection(projection);
@@ -72,11 +74,21 @@
       u.enter()
         .append('path')
         .attr('d', geoGenerator);
+               
     }
     
-    d3.json("http://localhost:8000/GeoWaltham/data_2.json").then(function(data) {
+    d3.json("http://localhost:8000/GeoWaltham/data.json").then(function(data) {
       update(data);
     });
+    
+    var zoom = d3.zoom()
+      .scaleExtent([1, 8])
+      .on('zoom', function() {
+          d3.select('#content g.map').selectAll('path')
+           .attr('transform', d3.event.transform);
+    });
+
+    d3.select('#content g.map').call(zoom);
     
   </script>
   
