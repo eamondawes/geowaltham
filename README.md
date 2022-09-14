@@ -1,7 +1,7 @@
 # geowaltham
 A bunch of GIS based projects about Waltham, finding me on Twitter @eamondawes is the best way to reach out
 
-Find web hosted portions on [eamondawes.github.io](eamondawes.github.io/index.html)
+Find web hosted portions on [eamondawes.github.io](https://eamondawes.github.io/index.html)
 
 ## Private Ways
 Waltham has a bunch of private ways and it causes lots of headaches for neighbors and abutters. 
