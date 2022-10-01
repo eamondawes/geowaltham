@@ -1,0 +1,86 @@
+LUC,text
+013,Mixed Res&Commercial
+014,Mixed Use Industrial
+019,Mixed Res. & Exempt
+031,Mixed Comm&Res
+039,Mixed Use Comm.
+041,Mixed Use Ind.
+043,Mixed Use Industrial/Comm
+091,Mixed Res. &  Exempt
+093,Mixed exm-comm
+101,Single-family
+102,Condominium
+104,Two-family
+105,Three-family
+106,Land w/Improvements
+109,Multiple Houses per Parcel
+111,Four To Eight Units
+112,More Than 8 Units
+121,Rooming/Boarding houses
+125,Congregate Housing-other
+130,Developable Residential Land
+131,Potentially Developable Residential Land
+132,Undevelopable Residential Land
+140,Child Care Facility
+300,Hotels
+304,Nursing Homes 
+316,Other Storage,Warehouse Distribution
+321,Bldg Materials For Retail
+322,Department Stores
+323,Shopping Centers & Malls
+324,Supermarkets
+325,Sm. Retail & Service Stores
+326,Eating & Drinking Establishment
+327,Commercial Condo Retail
+330,Auto Vehicles Sales/Services
+331,Automotive Supplies Sales
+332,Auto Repair Facilities
+333,Fuel Service Areas (only Fuel)
+334,Gas Serv.Station(Gas & Repair)
+335,Car Wash Facilities
+336,Parking Garages
+337,Parking Lots
+338,Other MV Sales/service/junk
+340,General Office Building
+341,Bank Buildings
+342,Medical Office Buildings
+343,Commercial Condo Warehouse
+349,Medical Condominium
+353,Fraternal Organizations
+354,Bus Transportation Facilities
+355,Funeral Homes
+362,Motion Picture Theaters
+374,Health Spas
+375,Tennis/racquetball Clubs
+376,Gymnasiums/athletic Clubs
+390,Developable Commercial Land
+391,Potentially Developable Commercial Land
+392,Undevelopable Commercial Land
+400,Bldg Used For Mfg Operations
+401,Warehouses-store Manuf. Pro
+402,Office Building-p/o Manuf.
+404,Research&DevelopmentFacilities
+410,Sand & Gravel
+412,Rock
+423,Electric Trans. Right-of-way
+424,Electricity Reg.substations
+426,Gas Pipeline Right-of-way
+430,Telephone Exchange Stations
+433,TV/Radio Transmission Facilities
+440,Developable Industrial Land
+441,Potentially Developable Industrial Land
+442,Unevelopable Industrial Land
+445,Industrial Condominium
+900,U.S. Government
+901,Commonwealth Of Massachusetts
+902,Counties
+903,Municipalities
+904,Private Colleges/schools
+905,Charitable Organizations
+906,Churches,Synagogues,Temple
+908,Housing Authorities
+909,Veterans Org.
+914,Dep Mental Health Mental
+917,Education: Mass State College
+920,Dept Enviromental Mgt
+999,Non-taxable Lots
