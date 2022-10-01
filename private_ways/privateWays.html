@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GeoJSON</title>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <style>
+    #content .map path {
+      stroke: #999;
+      fill: transparent;
+      stroke-width: .2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <svg width="100%" height="100vh">
+      <g class="map"></g>
+    </svg>
+  </div>
+  
+  <script>
+
+    function update(geojson) {
+      let projection = d3.geoEquirectangular().fitSize([800, 800], geojson);
+      let geoGenerator = d3.geoPath().projection(projection);
+      let u = d3.select('#content g.map')
+        .selectAll('path')
+        .data(geojson.features);
+
+      u.enter()
+        .append('path')
+        .attr('d', geoGenerator)
+        .style("fill", function (d) { if (d.properties.POLY_TYPE == "PRIV_ROW") {return "#400D51";} else return "#fff";});
+               
+    }
+    
+    d3.json("https://eamondawes.github.io/waltham_parcels.geojson").then(function(data) {
+      update(data);
+    });
+    
+    var zoom = d3.zoom()
+      .scaleExtent([1, 8])
+      .on('zoom', function() {
+          d3.select('#content g.map').selectAll('path')
+           .attr('transform', d3.event.transform);
+    });
+
+    d3.select('#content g.map').call(zoom);
+    
+  </script>
+  
+</body>
+
+</html>
