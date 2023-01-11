@@ -58,7 +58,7 @@ LUC,text
 392,Undevelopable Commercial Land
 400,Bldg Used For Mfg Operations
 401,Warehouses-store Manuf. Pro
-402,Office Building-p/o Manuf.
+402,Office Building-w/o Manuf.
 404,Research&DevelopmentFacilities
 410,Sand & Gravel
 412,Rock
@@ -77,7 +77,7 @@ LUC,text
 903,Municipalities
 904,Private Colleges/schools
 905,Charitable Organizations
-906,Churches,Synagogues,Temple
+906,Churches/Synagogues/Temple
 908,Housing Authorities
 909,Veterans Org.
 914,Dep Mental Health Mental

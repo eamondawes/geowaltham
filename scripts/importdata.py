@@ -2,7 +2,7 @@
 import json
 
 geojson = json.load(open('../data/waltham_parcels.geojson'))
-new_attrs = json.load(open('../data/selected_B&T.json'))
+new_attrs = json.load(open('../data/value_data.json'))
 
 #For each feature
 #Find it's LOC_ID
@@ -19,17 +19,6 @@ for feature in geojson['features']:
   if index is None:
     continue
   
-  if "TotalValue" in feature['properties'].values():
-    feature['properties']['TotalValue'] += new_attrs[index]['TotalValue']
-  else:
-    feature['properties']['TotalValue'] = new_attrs[index]['TotalValue']
-
-  feature['properties']['LUC'] = new_attrs[index]['LUC']
+  feature['properties']['ValuePerSQFT'] = new_attrs[index]['Tax Value Per Sqft']
   
-  if "OwnerOccup" in feature['properties'].values():
-    if feature['properties']['OwnerOccup'] != new_attrs[index]['OwnerOccup']:
-      feature['properties']['OwnerOccup'] = 'M'
-  else:
-    feature['properties']['OwnerOccup'] = new_attrs[index]['OwnerOccup']
-    
 json.dump(geojson, open('output.json', 'w'))
